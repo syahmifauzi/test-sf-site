@@ -4,7 +4,7 @@ layout: default
 
 <div class="sf-post-wrapper">
 
-  <div class="bg-top-wrapper"{% if page.image %} style="background-image: url('/assets/img/blogpost/{{ page.image }}');"{% endif %}></div>
+  <div class="bg-top-wrapper"{% if page.image %} style="background-image: url('{{ '/' | prepend: site.baseurl | prepend: site.url }}/assets/img/blogpost/{{ page.image }}');"{% endif %}></div>
 
   <div class="inner-wrapper">
     <div class="header-wrapper">
@@ -16,10 +16,10 @@ layout: default
     </div>
     <div class="post-nav-wrapper">
       {% if page.next %}
-      <li><a href="{{ page.next.url }}">&laquo;&laquo;&laquo; Next : {{ page.next.title }}</a></li>
+      <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}{{ page.next.url }}">&laquo;&laquo;&laquo; Next : {{ page.next.title }}</a></li>
       {% endif %}
       {% if page.previous %}
-      <li><a href="{{ page.previous.url }}">Previous : {{ page.previous.title }} &raquo;&raquo;&raquo;</a></li>
+      <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}{{ page.previous.url }}">Previous : {{ page.previous.title }} &raquo;&raquo;&raquo;</a></li>
       {% endif %}
     </div>
     {% if page.comments %}
