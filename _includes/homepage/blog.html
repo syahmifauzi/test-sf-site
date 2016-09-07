@@ -6,8 +6,8 @@
     <div class="second">Let’s read it together..</div>
     <div class="posts-wrapper">
       <ul>{% for post in site.posts %} {% if post.image %}
-        <li style="background-image: url('{{ '/' | prepend: site.baseurl | prepend: site.url }}/assets/img/blogpost/{{ post.image }}');"><a href="{{ post.url }}"><span>{{ post.date | date_to_string }} <br/>&raquo; {{ post.title }}</span></a></li>{% else %}
-        <li><a href="{{ '{{ post.url }}' | prepend: site.baseurl | prepend: site.url }}"><span>{{ post.date | date_to_string }} <br/>&raquo; {{ post.title }}</span></a></li>{% endif %} {% endfor %}
+        <li style="background-image: url('{{ '/' | prepend: site.baseurl | prepend: site.url }}/assets/img/blogpost/{{ post.image }}');"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}{{ post.url }}"><span>{{ post.date | date_to_string }} <br/>&raquo; {{ post.title }}</span></a></li>{% else %}
+        <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}{{ post.url }}"><span>{{ post.date | date_to_string }} <br/>&raquo; {{ post.title }}</span></a></li>{% endif %} {% endfor %}
       </ul>
     </div>
   </div>
