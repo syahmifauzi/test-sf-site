@@ -68,7 +68,7 @@ Run `$ gulp build` in console for distribution..
 All files for distribution will be build in 'dist/' folder..
 CSS &amp; JS files will be minified..
 
-![Description](/assets/img/blogpost/anime.gif)
+![Description]({{ '/' | prepend: site.baseurl | prepend: site.url }}/assets/img/blogpost/anime.gif)
 
 *Sorry, I'm newbie, trying to Gulp but end up writing ugly code.. Urgh!*   
 *You may playing with code inside gulpfile.js as you wish..*

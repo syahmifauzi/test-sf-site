@@ -15,7 +15,7 @@
             br
             | &raquo; {{ post.title }}
         | {% else %}
-        li: a(href="{{ '/' | prepend: site.baseurl | prepend: site.url }}{{ post.url }}")
+        li: a(href="{{ '{{ post.url }}' | prepend: site.baseurl | prepend: site.url }}")
           span
             | {{ post.date | date_to_string }} 
             br
